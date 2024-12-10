@@ -1,0 +1,1 @@
+01  WS-AREA-1 PIC X(100). 01  WS-AREA-2 PIC X(100). ... MOVE 'Some data' TO WS-AREA-1. MOVE WS-AREA-1 TO WS-AREA-2.  IF WS-AREA-1 = WS-AREA-2 THEN ...  This code looks correct, but a subtle bug exists if 'Some data' has trailing spaces.  The comparison will likely fail because the trailing spaces are included in the comparison, but may not be displayed by some output methods.
